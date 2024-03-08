@@ -10,7 +10,9 @@
 <body>
     <section class="form-body">
         <header>
+            <h3>Welcome to Mrs Wattlesbrook's</h3>
             <h1>Austenland</h1>
+            <h3>An Immersive Regency Era Experience</h3>
             <h2>Make your reservations below</h2>
         </header>
         <form action="" method="POST">
@@ -23,6 +25,37 @@
             <fieldset>
                 <label for="start-date">Arrival Date: <input type="date" id="start-date"></label>
                 <label for="end-date">Departure Date: <input type="date" id="end-date"></label>
+                <section class="package-types-menu">
+                    <p>Select Your Trip Package</p>
+                    <p><em>(Please note the with the copper package there will be certain 'exclusions')</em></p>
+                    <label for="copper-package"><input type="radio" id="copper-package" name="pack-option">Copper Package</label>
+                    <label for="silver-package"><input type="radio" id="silver-package" name="pack-option">Silver Package</label>
+                    <label for="gold-package"><input type="radio" id="gold-package" name="pack-option">Gold Package</label>
+                    <label for="platinum-package"><input type="radio" id="platinum-package" name="pack-option">Platinum Package</label>
+                </section>
+                <label for="dress-size-select">What is your dress size? (For costuming purposes)</label>
+                <select name="dress-size-opt" id="dress-size-select">
+                    <option value="">Select Your Dress Size?</option>
+                    <option value="00">00</option>
+                    <option value="0">0</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                    <option value="24">24</option>
+                </select>
+                <p>Do you suffer from any food allergies?</p>
+                <label for="milk"><input type="checkbox" id="milk" value="milk">Milk</label>
+                <label for="eggs"><input type="checkbox" id="eggs" value="eggs">Eggs</label>
+                <label for="peanuts"><input type="checkbox" id="peanuts" value="peanuts">Peanuts</label>
+                <label for="tree-nuts"><input type="checkbox" id="tree-nuts" value="tree nuts">Tree Nuts</label>
                 
             </fieldset>
             <fieldset>
