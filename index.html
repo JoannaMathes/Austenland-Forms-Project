@@ -27,10 +27,10 @@
                 <section class="package-types-menu">
                     <p>Select Your Trip Package</p>
                     <p><em>(Please note the with the copper package there will be certain 'exclusions')</em></p>
-                    <label for="copper-package"><input type="radio" id="copper-package" name="pack-option">Copper Package ($1,500)</label>
-                    <label for="silver-package"><input type="radio" id="silver-package" name="pack-option">Silver Package ($3,000)</label>
-                    <label for="gold-package"><input type="radio" id="gold-package" name="pack-option">Gold Package ($7,000)</label>
-                    <label for="platinum-package"><input type="radio" id="platinum-package" name="pack-option">Platinum Package ($10,000)</label>
+                    <label for="copper-package"><input type="radio" id="copper-package" name="pack-option" value="Copper Package">Copper Package ($1,500)</label>
+                    <label for="silver-package"><input type="radio" id="silver-package" name="pack-option" value="Silver Package">Silver Package ($3,000)</label>
+                    <label for="gold-package"><input type="radio" id="gold-package" name="pack-option" value="Gold Package">Gold Package ($7,000)</label>
+                    <label for="platinum-package"><input type="radio" id="platinum-package" name="pack-option" value="Platinum Package">Platinum Package ($10,000)</label>
                 </section>
                 <label for="dropdown">What is your dress size? (For costuming purposes)</label>
                 <select name="dress-size-opt" id="dropdown" required>
@@ -61,7 +61,7 @@
                 <label for="soy"><input type="checkbox" id="soy" value="soy">Soy</label>
                 <label for="additional-info">Describe your ideal experience and any other information you think we should know.<br> We want to fulfill your every expectation.</label>
                 <textarea id="additional-info" name="additional-information" placeholder="I would like Mr. Darcy to sweep me off my feet"></textarea>
-                <label for="number" id="number-label">On a scale from 1-10 specify the level of romance you desire <input type="number" id="number" name="romance-level" min="1" max="10"></label>
+                <label for="number" id="number-label">On a scale from 1-10 specify the level of romance you desire <input type="number" id="number" name="romance-level" min="1" max="10" placeholder="1"></label>
                 <p>1 = pleasant conversation, demure dancing, companionship and subtle occasional flirting<br>10 = intense infatuation, lavish affection, grand gestures, whirlwind romance ending in a proposal at the ball.</p>
                 <p><em>(Please note that some packages how limitations and romance preferences will be adjusted accordingly.)</em></p>
             </fieldset>
@@ -93,13 +93,13 @@
                 </select>
             </fieldset>
             <fieldset class="agreements">
-                <label for="terms"><input type="checkbox" id="terms" required>I have read and agree to the <a href="#">Terms of Service</a>.</label>
-                <label for="horse-gun"><input type="checkbox" id="horse-gun" required>I have read and agree to the <a href="#">Horsecursorback riding & vintage firearms safety waiver</a>.</label>
-                <label for="decorum"><input type="checkbox" id="decorum" required>I have read and agree to the <a href="#">Rules of decorum and actors emotional & physical boundaries agreement</a>.</label>
-                <label for="boundaries"><input type="checkbox" id="boundaries" required>I have read and agree to the <a href="#">Acknowledgement of exclusions for lower grade packages</a>.</label>
-                <label for="pact"><input type="checkbox" id="pact" required>I have read and agree to the <a href="#">Pact to abnegate technology and eschew all vestiges of modernity</a>.</label>
+                <label for="terms"><input type="checkbox" id="terms" value="Agreed to Terms of Service" required>I have read and agree to the <a href="#">Terms of Service</a>.</label>
+                <label for="horse-gun"><input type="checkbox" id="horse-gun" value="Agreed to Horse & Gun Safety Waiver" required>I have read and agree to the <a href="#">Horsecursorback riding & vintage firearms safety waiver</a>.</label>
+                <label for="decorum"><input type="checkbox" id="decorum" value="Agreed to emotional and physical boundaries agreement" required>I have read and agree to the <a href="#">Rules of decorum and actors emotional & physical boundaries agreement</a>.</label>
+                <label for="boundaries"><input type="checkbox" id="boundaries" value="Agreed to Exclusions" required>I have read and agree to the <a href="#">Acknowledgement of exclusions for lower grade packages</a>.</label>
+                <label for="pact"><input type="checkbox" id="pact" value="Agreed to ludite pact" required>I have read and agree to the <a href="#">Pact to abnegate technology and eschew all vestiges of modernity</a>.</label>
             </fieldset>
-            <input type="submit" value="Submit My Reservation"/>
+            <input type="submit" id="submit" value="Submit My Reservation"/>
         </form>
     </section>
 </body>
