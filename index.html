@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./styles/reset.css" rel="stylesheet" type="text/css"/>
+   
     <link href="./styles/styles.css" rel="stylesheet" type="text/css"/>
     <title>Austenland Reservations</title>
 </head>
@@ -11,30 +11,29 @@
     <section class="form-body">
         <header>
             <h3>Welcome to Mrs Wattlesbrook's</h3>
-            <h1>Austenland</h1>
-            <h3>An Immersive Regency Era Experience</h3>
+            <h1 id="title">Austenland</h1>
+            <p id="description">An Immersive Regency Era Experience</p>
             <h2>Make your reservations below</h2>
         </header>
-        <form action="" method="POST">
+        <form id="survey-form" action="" method="POST">
             <fieldset>
-                <label for="first-name">First Name: <input type="text" id="first-name" maxlength="30"></label>
-                <label for="last-name">Last Name: <input type="text" id="last-name" maxlength="30"></label>
-                <label for="email">Email: <input type="email" id="email"></label>
-                <label for="password">Password: <input type="password" id="password" minlength="8" placeholder="Must be atleast 8 characters long"></label>
+                <label for="name" id="name-label">First Name: <input type="text" id="name" maxlength="30" placeholder="Full Name" required></label>
+                <label for="email" id="email-label">Email: <input type="email" id="email" placeholder="MrsDarcy@Pemberly.com" required></label>
+                <label for="password">Password: <input type="password" id="password" minlength="8" placeholder="Must be atleast 8 characters long" required></label>
             </fieldset>
             <fieldset>
-                <label for="start-date">Arrival Date: <input type="date" id="start-date"></label>
-                <label for="end-date">Departure Date: <input type="date" id="end-date"></label>
+                <label for="start-date">Arrival Date: <input type="date" id="start-date" required></label>
+                <label for="end-date">Departure Date: <input type="date" id="end-date" required></label>
                 <section class="package-types-menu">
                     <p>Select Your Trip Package</p>
                     <p><em>(Please note the with the copper package there will be certain 'exclusions')</em></p>
-                    <label for="copper-package"><input type="radio" id="copper-package" name="pack-option">Copper Package</label>
-                    <label for="silver-package"><input type="radio" id="silver-package" name="pack-option">Silver Package</label>
-                    <label for="gold-package"><input type="radio" id="gold-package" name="pack-option">Gold Package</label>
-                    <label for="platinum-package"><input type="radio" id="platinum-package" name="pack-option">Platinum Package</label>
+                    <label for="copper-package"><input type="radio" id="copper-package" name="pack-option">Copper Package ($1,500)</label>
+                    <label for="silver-package"><input type="radio" id="silver-package" name="pack-option">Silver Package ($3,000)</label>
+                    <label for="gold-package"><input type="radio" id="gold-package" name="pack-option">Gold Package ($7,000)</label>
+                    <label for="platinum-package"><input type="radio" id="platinum-package" name="pack-option">Platinum Package ($10,000)</label>
                 </section>
-                <label for="dress-size-select">What is your dress size? (For costuming purposes)</label>
-                <select name="dress-size-opt" id="dress-size-select">
+                <label for="dropdown">What is your dress size? (For costuming purposes)</label>
+                <select name="dress-size-opt" id="dropdown" required>
                     <option value="">Select Your Dress Size?</option>
                     <option value="00">00</option>
                     <option value="0">0</option>
@@ -62,6 +61,9 @@
                 <label for="soy"><input type="checkbox" id="soy" value="soy">Soy</label>
                 <label for="additional-info">Describe your ideal experience and any other information you think we should know.<br> We want to fulfill your every expectation.</label>
                 <textarea id="additional-info" name="additional-information" placeholder="I would like Mr. Darcy to sweep me off my feet"></textarea>
+                <label for="number" id="number-label">On a scale from 1-10 specify the level of romance you desire <input type="number" id="number" name="romance-level" min="1" max="10"></label>
+                <p>1 = pleasant conversation, demure dancing, companionship and subtle occasional flirting<br>10 = intense infatuation, lavish affection, grand gestures, whirlwind romance ending in a proposal at the ball.</p>
+                <p><em>(Please note that some packages how limitations and romance preferences will be adjusted accordingly.)</em></p>
             </fieldset>
             <fieldset>
                 <label for="fave-novel">Which of Jane Austen's novels is your particular favorite?</label>
@@ -90,16 +92,14 @@
                     <option value="Anne Elliot">Anne Elliot</option>
                 </select>
             </fieldset>
-            <fieldset>
-                <label for="terms"><input type="checkbox" id="terms" required>I have read and agree to the<a href="#popup">Terms of Service</a>.</label>
-                <div id="popup" class="overlay">
-                    <div class="popup">
-                      <a href="#" class="close">&times;</a>
-                      <h2>Terms of Service</h2>
-                      <p>You can put any text or content here.</p>
-                    </div>
-                  </div>
+            <fieldset class="agreements">
+                <label for="terms"><input type="checkbox" id="terms" required>I have read and agree to the <a href="#">Terms of Service</a>.</label>
+                <label for="horse-gun"><input type="checkbox" id="horse-gun" required>I have read and agree to the <a href="#">Horsecursorback riding & vintage firearms safety waiver</a>.</label>
+                <label for="decorum"><input type="checkbox" id="decorum" required>I have read and agree to the <a href="#">Rules of decorum and actors emotional & physical boundaries agreement</a>.</label>
+                <label for="boundaries"><input type="checkbox" id="boundaries" required>I have read and agree to the <a href="#">Acknowledgement of exclusions for lower grade packages</a>.</label>
+                <label for="pact"><input type="checkbox" id="pact" required>I have read and agree to the <a href="#">Pact to abnegate technology and eschew all vestiges of modernity</a>.</label>
             </fieldset>
+            <input type="submit" value="Submit My Reservation"/>
         </form>
     </section>
 </body>
