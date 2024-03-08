@@ -1,0 +1,11 @@
+body {
+    background-image: url('../images/tim-cooper-XfqGuWevmvs-unsplash.jpg');
+}
+.form-body {
+    background-color: bisque;
+    width: 80%;
+    margin: auto;
+}
+label {
+    display: block;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <link href="./styles/reset.css" rel="stylesheet" type="text/css" />
     <link href="./styles/styles.css" rel="stylesheet" type="text/css"/>
     <title>Austenland Reservations</title>
 </head>
@@ -50,7 +50,7 @@
                     <option value="22">22</option>
                     <option value="24">24</option>
                 </select>
-                <p>Do you suffer from any food allergies?</p>
+                <p>Do you suffer from any food allergies? (check all that apply)</p>
                 <label for="milk"><input type="checkbox" id="milk" value="milk">Milk</label>
                 <label for="eggs"><input type="checkbox" id="eggs" value="eggs">Eggs</label>
                 <label for="peanuts"><input type="checkbox" id="peanuts" value="peanuts">Peanuts</label>
@@ -60,10 +60,10 @@
                 <label for="wheat"><input type="checkbox" id="wheat" value="wheat or gluten">Wheat/Gluten</label>
                 <label for="soy"><input type="checkbox" id="soy" value="soy">Soy</label>
                 <label for="additional-info">Describe your ideal experience and any other information you think we should know.<br> We want to fulfill your every expectation.</label>
-                <textarea id="additional-info" name="additional-information" placeholder="I would like Mr. Darcy to sweep me off my feet"></textarea>
+                <textarea id="additional-info" name="additional-information" placeholder="I would like Mr. Darcy to sweep me off my feet" rows="5" cols="60"></textarea>
                 <label for="number" id="number-label">On a scale from 1-10 specify the level of romance you desire <input type="number" id="number" name="romance-level" min="1" max="10" placeholder="1"></label>
-                <p>1 = pleasant conversation, demure dancing, companionship and subtle occasional flirting<br>10 = intense infatuation, lavish affection, grand gestures, whirlwind romance ending in a proposal at the ball.</p>
-                <p><em>(Please note that some packages how limitations and romance preferences will be adjusted accordingly.)</em></p>
+                <p>1 = pleasant conversation, demure dancing, companionship and subtle occasional flirting<br>10 = intense infatuation, lavish affection and attention, grand gestures, whirlwind romance ending in a proposal at the ball.</p>
+                <p><em>(Please note that some packages have limitations and romance preferences will be adjusted accordingly.)</em></p>
             </fieldset>
             <fieldset>
                 <label for="fave-novel">Which of Jane Austen's novels is your particular favorite?</label>
@@ -94,10 +94,10 @@
             </fieldset>
             <fieldset class="agreements">
                 <label for="terms"><input type="checkbox" id="terms" value="Agreed to Terms of Service" required>I have read and agree to the <a href="#">Terms of Service</a>.</label>
-                <label for="horse-gun"><input type="checkbox" id="horse-gun" value="Agreed to Horse & Gun Safety Waiver" required>I have read and agree to the <a href="#">Horsecursorback riding & vintage firearms safety waiver</a>.</label>
+                <label for="horse-gun"><input type="checkbox" id="horse-gun" value="Agreed to Horse & Gun Safety Waiver" required>I have read and agree to the <a href="#">Horseback riding & vintage firearms safety waiver</a>.</label>
                 <label for="decorum"><input type="checkbox" id="decorum" value="Agreed to emotional and physical boundaries agreement" required>I have read and agree to the <a href="#">Rules of decorum and actors emotional & physical boundaries agreement</a>.</label>
                 <label for="boundaries"><input type="checkbox" id="boundaries" value="Agreed to Exclusions" required>I have read and agree to the <a href="#">Acknowledgement of exclusions for lower grade packages</a>.</label>
-                <label for="pact"><input type="checkbox" id="pact" value="Agreed to ludite pact" required>I have read and agree to the <a href="#">Pact to abnegate technology and eschew all vestiges of modernity</a>.</label>
+                <label for="pact"><input type="checkbox" id="pact" value="Agreed to ludite pact" required>I have read and agree to the <a href="#">Pact to abnegate technology and eschew all vestiges of modernity during a visit to Austenland</a>.</label>
             </fieldset>
             <input type="submit" id="submit" value="Submit My Reservation"/>
         </form>
