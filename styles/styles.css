@@ -1,11 +1,131 @@
+/* this code is kind of messy come back and clean up */
+/* Also there needs to be some responsive styling added 
+after or duiring cleanup */
+/* I think I will submit this as is since it works for the assignment
+but I will not be happy until I have it condensed and combined for concise 
+css and properly polished to look great at every screen size. */
+/* But at the moment I need to step away from it and feel like I am 
+making progress elsewhere and come back to it and make it the best it can 
+be */
+/* the html needs to be cleaned up and the styling combined and then made responsive*/ 
 body {
-    background-image: url('../images/tim-cooper-XfqGuWevmvs-unsplash.jpg');
+    background-image: url('../images/austenesqe-landscape.jpg');
+    background-size: cover;
+    font-family: "Cormorant Garamond";
+    font-size: 16px;
 }
 .form-body {
     background-color: bisque;
-    width: 80%;
+    max-width: 50%;
     margin: auto;
+}
+header {
+    font-family: "Great Vibes";
+    text-align: center;
+    margin-top: 3em;
+    padding: 2em 0px;
+}
+header > h3 {
+    font-size: 2em;
+}
+#description {
+    font-size: 1.3rem;
+    padding: 12px;
+}
+hr {
+    text-align: center;
+    border-top: 3px double #9C7765;
+    width: 60%;
+}
+h1 {
+    padding-top: 0.2em;
+    font-size: 6em;
+}
+form {
+    padding: 0 55px;
+}
+.form-body {
+    border: 8px double #9C7765;
 }
 label {
     display: block;
+    padding-bottom: 20px;
+    width: 75%;
+    margin: 0 auto;
+}
+.bold {
+    font-weight: 700;
+    display: inline-block;
+}
+.center {
+    text-align: center;
+}
+.text-inputs > label, .dates > label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    padding-right: 10px;
+}
+.text-inputs > input,  .dates > input{
+    display: inline-block;
+    width: 50%;
+}
+.package-title {
+    text-align: center;
+    padding: 20px 0px;
+    line-height: 1.4;
+}
+.dress-section {
+    text-align: center;
+    padding: 20px 1px;
+}
+.allergies-section p {
+    padding: 10px;
+}
+.allergies-section label {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 50px;
+}
+.romance-level-section {
+    text-align: center;
+    line-height: 1.5;
+}
+#number-label {
+    padding-top: 15px;
+}
+.disclaimer {
+    font-size: 10px;
+}
+.favorites-section {
+    text-align: center;
+}
+.favorites-section > label {
+    padding-top: 15px;
+    font-weight: 700;
+}
+.favorites-section > select {
+    margin-bottom: 25px;
+}
+a {
+    color: #5B6E59;
+}
+.submit-section {
+    text-align: center;
+}
+.submit-button{
+    padding: 10px 10px 5px;
+    font-family: "Great Vibes", cursive;
+    font-size: 25px;
+    margin-bottom: 20px;
+    background-color: #D7D3C2;
+}
+.submit-button:hover {
+    background-color: #415548;
+    color: #D7D3C2;
+}
+.submit-button:active {
+    margin-top: 8px;
+    background-color: #D7D3C2;
+    color: #8B8780;
 }

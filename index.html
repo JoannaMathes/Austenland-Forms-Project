@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="./styles/reset.css" rel="stylesheet" type="text/css" />
     <link href="./styles/styles.css" rel="stylesheet" type="text/css"/>
     <title>Austenland Reservations</title>
@@ -11,61 +14,77 @@
     <section class="form-body">
         <header>
             <h3>Welcome to Mrs Wattlesbrook's</h3>
+            <hr>
             <h1 id="title">Austenland</h1>
+            <hr>
             <p id="description">An Immersive Regency Era Experience</p>
-            <h2>Make your reservations below</h2>
         </header>
         <form id="survey-form" action="" method="POST">
-            <fieldset>
-                <label for="name" id="name-label">First Name: <input type="text" id="name" maxlength="30" placeholder="Full Name" required></label>
-                <label for="email" id="email-label">Email: <input type="email" id="email" placeholder="MrsDarcy@Pemberly.com" required></label>
-                <label for="password">Password: <input type="password" id="password" minlength="8" placeholder="Must be atleast 8 characters long" required></label>
+            <fieldset class="text-inputs">
+                <label for="name" id="name-label">First Name: </label><input type="text" id="name" maxlength="30" placeholder="Full Name" required>
+                <label for="email" id="email-label">Email: </label><input type="email" id="email" placeholder="MrsDarcy@Pemberly.com" required>
+                <label for="password">Password: </label><input type="password" id="password" minlength="8" placeholder="Must be atleast 8 characters long" required>
             </fieldset>
             <fieldset>
-                <label for="start-date">Arrival Date: <input type="date" id="start-date" required></label>
-                <label for="end-date">Departure Date: <input type="date" id="end-date" required></label>
+                <section class="dates">
+                    <label for="start-date">Arrival Date: </label><input type="date" id="start-date" required>
+                    <label for="end-date">Departure Date: </label><input type="date" id="end-date" required>
+                </section>
+                <hr>
                 <section class="package-types-menu">
-                    <p>Select Your Trip Package</p>
-                    <p><em>(Please note the with the copper package there will be certain 'exclusions')</em></p>
+                   <div class="package-title">
+                        <p class="bold">Select Your Trip Package</p>
+                        <p><em>(Please note the with the copper package there will be certain 'exclusions')</em></p>
+                   </div>
                     <label for="copper-package"><input type="radio" id="copper-package" name="pack-option" value="Copper Package">Copper Package ($1,500)</label>
                     <label for="silver-package"><input type="radio" id="silver-package" name="pack-option" value="Silver Package">Silver Package ($3,000)</label>
                     <label for="gold-package"><input type="radio" id="gold-package" name="pack-option" value="Gold Package">Gold Package ($7,000)</label>
                     <label for="platinum-package"><input type="radio" id="platinum-package" name="pack-option" value="Platinum Package">Platinum Package ($10,000)</label>
                 </section>
-                <label for="dropdown">What is your dress size? (For costuming purposes)</label>
-                <select name="dress-size-opt" id="dropdown" required>
-                    <option value="">Select Your Dress Size?</option>
-                    <option value="00">00</option>
-                    <option value="0">0</option>
-                    <option value="2">2</option>
-                    <option value="4">4</option>
-                    <option value="6">6</option>
-                    <option value="8">8</option>
-                    <option value="10">10</option>
-                    <option value="12">12</option>
-                    <option value="14">14</option>
-                    <option value="16">16</option>
-                    <option value="18">18</option>
-                    <option value="20">20</option>
-                    <option value="22">22</option>
-                    <option value="24">24</option>
-                </select>
-                <p>Do you suffer from any food allergies? (check all that apply)</p>
-                <label for="milk"><input type="checkbox" id="milk" value="milk">Milk</label>
-                <label for="eggs"><input type="checkbox" id="eggs" value="eggs">Eggs</label>
-                <label for="peanuts"><input type="checkbox" id="peanuts" value="peanuts">Peanuts</label>
-                <label for="tree-nuts"><input type="checkbox" id="tree-nuts" value="tree nuts">Tree Nuts</label>
-                <label for="fish"><input type="checkbox" id="fish" value="fish">Fish</label>
-                <label for="shellfish"><input type="checkbox" id="shellfish" value="shellfish">Shellfish</label>
-                <label for="wheat"><input type="checkbox" id="wheat" value="wheat or gluten">Wheat/Gluten</label>
-                <label for="soy"><input type="checkbox" id="soy" value="soy">Soy</label>
-                <label for="additional-info">Describe your ideal experience and any other information you think we should know.<br> We want to fulfill your every expectation.</label>
-                <textarea id="additional-info" name="additional-information" placeholder="I would like Mr. Darcy to sweep me off my feet" rows="5" cols="60"></textarea>
-                <label for="number" id="number-label">On a scale from 1-10 specify the level of romance you desire <input type="number" id="number" name="romance-level" min="1" max="10" placeholder="1"></label>
-                <p>1 = pleasant conversation, demure dancing, companionship and subtle occasional flirting<br>10 = intense infatuation, lavish affection and attention, grand gestures, whirlwind romance ending in a proposal at the ball.</p>
-                <p><em>(Please note that some packages have limitations and romance preferences will be adjusted accordingly.)</em></p>
+                <hr>
+                <section class="dress-section">
+                    <label for="dropdown"><p class="bold">What is your dress size? (For costuming purposes)</p></label>
+                    <select name="dress-size-opt" id="dropdown" required>
+                        <option value="">Select Your Dress Size?</option>
+                        <option value="00">00</option>
+                        <option value="0">0</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                    </select>
+                </section>
+                <hr>
+                <section class="allergies-section">
+                    <p class="bold center">Do you suffer from any food allergies? (check all that apply)</p>
+                        <label for="milk"><input type="checkbox" id="milk" value="milk">Milk</label>
+                        <label for="eggs"><input type="checkbox" id="eggs" value="eggs">Eggs</label>
+                        <label for="peanuts"><input type="checkbox" id="peanuts" value="peanuts">Peanuts</label>
+                        <label for="tree-nuts"><input type="checkbox" id="tree-nuts" value="tree nuts">Tree Nuts</label>
+                        <label for="fish"><input type="checkbox" id="fish" value="fish">Fish</label>
+                        <label for="shellfish"><input type="checkbox" id="shellfish" value="shellfish">Shellfish</label>
+                        <label for="wheat"><input type="checkbox" id="wheat" value="wheat or gluten">Wheat/Gluten</label>
+                        <label for="soy"><input type="checkbox" id="soy" value="soy">Soy</label>
+                </section>
+                <hr>
+               <section class="romance-level-section">
+                    <label for="additional-info"><p class="bold">Describe your ideal experience and any other information you think we should know.</p><br> We want to fulfill your every expectation.</label>
+                    <textarea id="additional-info" name="additional-information" placeholder="I would like Mr. Darcy to sweep me off my feet" rows="5" cols="60"></textarea>
+                    <label for="number" id="number-label"><p class="bold">On a scale from 1-10 specify the level of romance you desire </p>  <input type="number" id="number" name="romance-level" min="1" max="10" placeholder="1"></label>
+                    <p>1 = pleasant conversation, demure dancing, companionship and subtle occasional flirting<br>10 = intense infatuation, lavish affection and attention, grand gestures, whirlwind romance ending in a proposal at the ball.</p>
+                    <p class="disclaimer"><em>(Please note that some packages have limitations and romance preferences will be adjusted accordingly.)</em></p>
+               </section>
             </fieldset>
-            <fieldset>
+            <hr>
+            <fieldset class="favorites-section"> 
                 <label for="fave-novel">Which of Jane Austen's novels is your particular favorite?</label>
                 <select id="fave-novel" name="favorite-novel">
                     <option value="">Select one...</option>
@@ -77,6 +96,7 @@
                     <option value="persuasion">Persuasion</option>
                     <option value="lady susan">Lady Susan</option>
                 </select>
+                <hr>
                 <label for="heroine-identity">Which of Austen's Heroines do you most identify with?</label>
                 <select id="heroine-identity" name="heroines">
                     <option value="">Select one...</option>
@@ -92,6 +112,7 @@
                     <option value="Anne Elliot">Anne Elliot</option>
                 </select>
             </fieldset>
+            <hr>
             <fieldset class="agreements">
                 <label for="terms"><input type="checkbox" id="terms" value="Agreed to Terms of Service" required>I have read and agree to the <a href="#">Terms of Service</a>.</label>
                 <label for="horse-gun"><input type="checkbox" id="horse-gun" value="Agreed to Horse & Gun Safety Waiver" required>I have read and agree to the <a href="#">Horseback riding & vintage firearms safety waiver</a>.</label>
@@ -99,7 +120,9 @@
                 <label for="boundaries"><input type="checkbox" id="boundaries" value="Agreed to Exclusions" required>I have read and agree to the <a href="#">Acknowledgement of exclusions for lower grade packages</a>.</label>
                 <label for="pact"><input type="checkbox" id="pact" value="Agreed to ludite pact" required>I have read and agree to the <a href="#">Pact to abnegate technology and eschew all vestiges of modernity during a visit to Austenland</a>.</label>
             </fieldset>
-            <input type="submit" id="submit" value="Submit My Reservation"/>
+            <section class="submit-section">
+                <input type="submit" id="submit" value="Submit My Reservation" class="submit-button"/>
+            </section>
         </form>
     </section>
 </body>
