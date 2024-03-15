@@ -63,12 +63,10 @@ label {
     width: 50%;
 }
 .package-title {
-    text-align: center;
     padding: 20px 0px;
     line-height: 1.4;
 }
 .dress-section {
-    text-align: center;
     padding: 20px 1px;
 }
 .allergies-section p {
@@ -81,7 +79,6 @@ label {
     text-align: left;
 }
 .romance-level-section {
-    text-align: center;
     line-height: 1.5;
 }
 .additional-info {
@@ -92,9 +89,6 @@ label {
 }
 .disclaimer {
     font-size: 10px;
-}
-.favorites-section {
-    text-align: center;
 }
 .favorites-section > label {
     padding-top: 15px;
